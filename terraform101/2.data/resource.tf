@@ -24,7 +24,7 @@ data "aws_ami" "ubuntu" {
 # 이름이 없으면 심심하니까 tag도 같이 넣어주자
 resource "aws_instance" "example" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   tags = {
       Name = "terraform101"
